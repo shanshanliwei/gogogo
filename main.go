@@ -2,8 +2,17 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/shanshanliwei/gogogo/input"
 )
 
 func main() {
-	fmt.Println("hello shanshan :)")
+	dataAsStr, err := input.GetFileStringByPath("./file")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	fmt.Println(dataAsStr)
+
 }
